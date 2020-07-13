@@ -1,0 +1,10 @@
+node_modules
+node_modules/
+.env
+client/.env
+old
+.Makefile
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
