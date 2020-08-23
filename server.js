@@ -12,22 +12,22 @@ const PORT = (process.env.PORT || 3000);
 
 const storeInfoRoutes = require("./routes/storeInfoRoutes");
 
-mongoose.connect(process.env.MONGODB_URI, {
-  // make pool size an environmental variable?  
-  poolSize: process.env.MONGO_POOLSIZE,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-  sslValidate: false,
-  sslCA: fs.readFileSync('./database-scripts/rds-combined-ca-bundle.pem')
-})
-  .then(() => {
-    console.log("Mongoose is connected");
-  })
-  .catch((error) => {
-  console.log("Mongoose Connection Error: ", error);
-});
+// mongoose.connect(process.env.MONGODB_URI, {
+//   // make pool size an environmental variable?  
+//   poolSize: process.env.MONGO_POOLSIZE,
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false,
+//   useCreateIndex: true,
+//   sslValidate: false,
+//   sslCA: fs.readFileSync('./database-scripts/rds-combined-ca-bundle.pem')
+// })
+//   .then(() => {
+//     console.log("Mongoose is connected");
+//   })
+//   .catch((error) => {
+//   console.log("Mongoose Connection Error: ", error);
+// });
 
 // mongoose.connection.on("connected", () => {
 //   console.log("Mongoose is connected");
